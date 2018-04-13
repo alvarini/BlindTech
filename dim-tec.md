@@ -1,3 +1,9 @@
+
+
+[TOC]
+
+
+###### //guidelines//
 Dimensión técnica
 
 Aparato-mango
@@ -30,7 +36,7 @@ Sistema de comunicación : hapticband
 - Estudio de la resolución de la banda acorde con el lenguaje que queremos transmitir
 - Metodologia del diseño para la hapticband – design for X
 
-## Prefacio
+# Prefacio
 
 Tras el análisis teórico llega a la hora de tomar decisiones vitales en el diseño, tanto de hardware como de software. En un primer acercamiento, la idea es hacer el sistema lo más simple posible, para ello nos gustaría poder reconocer el espacio únicamente con ultrasonidos, aunque la incorporación de una cámara + láser u otra tecnología puede ser implantada para mejorar el sistema (aunque llevaría a un coste superior + peso).
 
@@ -46,6 +52,7 @@ Nuestro proyecto está orientado, igualmente, a dos tipos de desarrollos por div
 - **Desarrollo Open Source:** Gracias a la gran comunidad creciente de la que se dispone y de que ,además, la idea produce bastante impacto social, las primeras fases del desarrollo y prototipos se desarrollarán e iran mejorando con la ayuda de la comunidad. Es por ello que intentaremos definir todo el proyecto de la manera más intuitiva posible, para aumentar el alcance comunitario. Todo el proyecto será aplicable a software freeware o/y opensource.
 - **Desarrollo de producto comercial:** Lógicamente, este producto puede ser desarrollado o fabricado en casa, cual impresora 3D, pero estamos en un ámbito dónde prima la seguridad y fiabilidad del producto. No podemos ofrecerle al invidente un producto "sin terminar" o con posibles "bugs". Es por ello que comercializándolo nos obligamos a adaptarnos a un marco legal, normativo y social además de tests de calidad, durabilidad, fiabilidad, seguridad... Certificados, homologación... así pues, como las impresoras 3D u otros proyectos, puedes decidir montártelo tú mismo o comprarlo. 
 
+Así mismo, toda la documentación se traducirá a inglés una vez se haya consolidado el proyecto.
 
 
 
@@ -65,13 +72,13 @@ Para no olvidar ningún detalle y obtener un resultado aceptable se decidió usa
 
 [https://en.wikipedia.org/wiki/Design\_for\_X](https://en.wikipedia.org/wiki/Design_for_X)
 
-## Investigación previa
+# Investigación previa
 
 Se realizó una investigación del mercado sobre los tipos de bastones que se pueden encontrar, sus diferentes características y el tipo de usuario al que está destinado, además se mantuvo conversaciones con invidentes reales y técnicos que enseñan a utilizar el bastón (gracias a la ONCE). Pudimos concluir con una serie de requisitos importantes:
 
 - **Peso:** El total del peso del mango + bastón no debería exceder el medio kilogramo. En caso de no ser posible habría que buscar soluciones para reducir la fatiga que produce el peso en el usuario. Tras varias conversaciones, los usuarios nos pidieron sobre todo comodidad pues el tiempo que puede pasar caminando el usuario es superior a 1 hora. También se considera el centro de gravedad en el diseño, concentrando la masa en las partes superiores.
 - **Posibilidad de acople al bastón** : La idea principal era eliminar el bastón pero tras conversaciones con usuarios se decidió permitir el acople, pues sin él el usuario no se sentiría ni cómodo ni seguro.
--
+
 - **Volumen ajustado:** En el mercado existen varios modelos(*) y estos no cumplen los requisitos expuestos anteriormente y, sobre todo, el volumen. Disponemos de tecnología suficientemente avanzada como para hacer un aparato de dimensiones reducidas.
 - **Utilización exclusiva de ultrasonidos** : En principio se consideró el uso de cámaras y otros sensores. Esto solo aumentaría la dificultad del proyecto, el precio y otros factores. Se pueden conseguir grandes resultados con ultrasonidos y nos centraremos en ello. En un futuro se podría considerar su incorporación.
 - **Lenguaje no intrusivo** : No debemos intervenir demasiado en los sentidos de los usuarios, por ello se eligió el lenguaje mediante vibraciones. Se consideró el uso de audio para indicaciones o control por voz, pero estos interferían en sobre los sentidos de los invidentes, los cuales están más desarrollados que los demás al no disponer de la visión en cierto porcentaje. No obstante, el audio y el control por voz, al igual que las cámaras, podrían ser incorporados en un futuro además que es una función que algunos usuarios reclamarían.
@@ -87,7 +94,7 @@ Además, tras comentar la idea en la asociación malagueña de la ONCE se desper
 - Imposibilidad de moverse a veces de manera autónoma
 - Falta de información en sitios públicos.
 
-## Especificaciones del diseño - Prototipo
+# Especificaciones del diseño - Prototipo basado en herramientas abiertas
 
 **Ultrasonidos:** Datasheet de los ultrasonidos utilizados para experimentos y con los cuales se realizará el primer prototipo.
 
@@ -95,40 +102,60 @@ Tabla 1, HCSR04 datasheet
 INTRODUCIR TABLA
 
 Para el óptimo funcionamiento se requiere de una modificación de este módulo, la cual se detallará en este texto. Hemos elegidos estos ultrasonidos por su precio y facilidad de incorporación a nuestro proyecto. Posteriormente se pueden sustituir por unos de mejor calidad y orientados a nuestro fin.
+Se usarán varios pares de ultrasonidos para reconocer el espacio. En principio el área que queremos abarcar es de 180 grados en la horizontal, entre 15-45 en la vertical (este ángulo depende de la altura del invidente), y otros sitios clave en las áreas muertas (especificado en dim_teo).
 
-**Mango acopable:** El diseño del mango es compatible y acopable a cualquier bastón y también es posible su uso de manera autónoma. En el se encuentra, a parte de una batería, la electrónica necesaria y la hapticband.
+**Mango acopable:** El diseño del mango es compatible y acopable a cualquier bastón y también es posible su uso de manera autónoma. En el se encuentra, a parte de una batería, la electrónica necesaria y la hapticband. Imprimible en 3D y montaje con piezas normalizadas.
 
-**Hapticband:** Sistema de comunicación usuario-máquina. Compuesto de una pantalla de tamaño por definir, cuyos píxeles serán pequeños vibradores acoplados por matrices y distingiendo 3 zonas, izquierda, centro derecha. La resolución estimada de esta pantalla está pensada entre 12x4 y 24x8. Además posee controles capacitivos para acceder a algunas funciones disponibles.
+**Hapticband:** Sistema de comunicación usuario-máquina. Compuesto de una pantalla de tamaño por definir, cuyos píxeles serán pequeños vibradores acoplados por matrices y distingiendo 3 zonas, izquierda, centro derecha. La resolución estimada de esta pantalla está pensada entre 6x3 y 12x4. Además posee controles capacitivos para acceder a algunas funciones disponibles. Se pueden utilizar por ejemplo los ROB-08449. La superficie y el dispositivo en general será muy intuitivo y touchfriendly, es decir, cómodo de tocar, diseñado para ser tocado.
 
 **Lenguaje de comunicación:** Relacionado directamente con la hapticband, se establecerá un lenguaje sencillo e intuitivo que traducirá decisiones en vibraciones y que el usuario entenderá como órdenes o avisos concretos.
 
 **Dispositivo de apoyo** : Equivalente a las tripas de un smartphone. Este dispostivo se interconecta con el mango para ofrecer apoyo extra de sensores, como GPS, acelerómetro o brújula. Puede ser sustituido por un smartphone normal, previa instalación de una APP. No será objeto de estudio en este proyecto pero se considerará su existencia.
 
-**Electrónica para el prototipado** : En el interior del mango se encontrará un microprocesador principal + microprocesador destinado a tareas de IA y Machine Learning +interfaces de conexión + memoria. Sin embargo, para el primer prototipo se utilizará una placa Intel Edison + Base shield de Arduino. El código podría ser exportado y la electrónica se podría diseñar y fabricar a nuestras necesidades, siendo posible la adaptación al mango.
+**Electrónica para el prototipado** : En el interior del mango se encontrará un microprocesador principal, arduino, rapsberry, orange pi, intel edison... + +interfaces de conexión + memoria+ batería. Sin embargo, para el primer prototipo se utilizará una placa Intel Edison + Base shield de Arduino. El código podría ser exportado y la electrónica se podría diseñar y fabricar a nuestras necesidades, siendo posible la adaptación al mango.
 
-## Especificaciones del producto final
+# Especificaciones del producto final
+**
+Considerando parte de lo anterior:**
+En cuánto a la eléctronica, sería interesante incluir un cooprocesador destinado a tareas de IA y Machine Learning, que mejorarán los resultados para cada usuario individual, según su zona.
 
-Considerando parte de lo anterior:
-
-En cuanto al diseño del producto:
-
-En cuanto al diseño interno:
+**En cuanto al diseño del producto:**
+Será fabricado en mejores materiales, más duraderos, livianos y ergonómicos. Además las tolerancias en la fabricación nos permitirán un resultado en general bastante óptimo.
+**
+En cuanto al diseño interno:**
+Toda la eléctronica, conectividad etc estará integrado en una placa prediseñada, dónde ahorraremos peso y energía. La hapticband también mejoraría muchísimo, utilizando otro tipo de vibradores (desde piezoeléctricos hasta cualquier sistema que pueda vibrar, cada cual con diferentes sensaciones)
 
 # Diseño Hapticband
 
-Investigacion
+## Investigacion
+### Innovacion en vibracion
+**Ultrahaptics:** Ultrasonidos mueven el aire para provocar el efecto del tacto. Es una tecnología aún en desarrollo pero bastante interesante que además refleja la utilidad que pueden llegar a tener los ultrasonidos.
+https://www.ultrahaptics.com/applications/
+**AirReal:** By Disney, su objetivo es transmitir sensaciones de tacto conforme se consume contenido multimedia. La vibración se transmite sin contacto por medio aros toroidales de aire. 
 
-Sketches
+Además, la tecnología háptica se encuentra en muchas disciplinas como la medicina, la informática, los videojuegos etc... 
+Tras la investigación se concluye que la idea principal sigue siendo viable, es decir, una especie de pantalla de vibradores, los cuales pueden ser similares a los de los smartphones (por su tamaño)
 
-Descripción del lenguaje
+## Sketches
 
-Especificación final
+## Descripción del lenguaje
+Gracias a las virtudes de las vibraciones tenemos dos parámetros importantes
+- Amplitud, A, **~**
+- Frecuencia, f, **'**
+Debemos diseñar un lenguaje que se adapte a estos parámetros, así pues, mediante signos, interpretaremos las señales vibratorias en texto para mejor entendimiento del lector.
+La estructura será: Amplitud^Frecuencia^, A^f^, **~^'^**.
+### Niveles de amplitud
+### Niveles de frecuencia
+### Código lingüistico
+
 
 # Diseño del mango
-
+## Dimensiones a considerar
+## Ergomía a la mano en base al uso del bastón de invidentes
 Ergonomía de usuario
 
-Espacio disponible para eléctronica
+## Decisiones dimensionales
+## Sketches
 
 # Diseño del software
 
@@ -148,5 +175,3 @@ Nuestro código
 
 1
 
-#
- Los modelos disponibles parecidos al que queremos realizar se encuentran desde 800€ la versión más básica. No existe mucha información en la red y la que hay es de dudosa credibilidad (videos de uso). Además las características que ofrecen no solucionan completamente el problema de la orientación.
