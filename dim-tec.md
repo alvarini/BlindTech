@@ -142,12 +142,28 @@ Tras la investigación se concluye que la idea principal sigue siendo viable, es
 Gracias a las virtudes de las vibraciones tenemos dos parámetros importantes
 - Amplitud, A, **~**
 - Frecuencia, f, **'**
-Debemos diseñar un lenguaje que se adapte a estos parámetros, así pues, mediante signos, interpretaremos las señales vibratorias en texto para mejor entendimiento del lector.
-La estructura será: Amplitud^Frecuencia^, A^f^, **~^'^**.
-### Niveles de amplitud
-### Niveles de frecuencia
-### Código lingüistico
+Debemos diseñar un lenguaje que se adapte a estos parámetros, así pues, mediante signos, interpretaremos las señales vibratorias en el texto para mejor entendimiento del lector.
+La estructura será: Amplitud^Frecuencia^ =  A^f^= **~^'^**.
+Así pues la amplitud define la magnitud del obstáculo y la amplitud la cercanía.
+En el hapticband disponemos de 3 zonas, izquierda, centro, derecha. Cada zona integrará un conjunto de vibradores y cada zona interpretará su espacio y lo comunicará, tanto horizontal como verticalmente. El reconocimiento será contínuo por seguridad, pero el usuario puede verificar algún espacio si planea algún movimiento. 
+Como nombre descriptivo lo llamaremos HAF, que mezcla háptico, amplitud y frecuencia. 
 
+### Niveles de amplitud
+A- Obstáculo esquivable variando la dirección levemente, fácil de esquivar. Objeto pequeño, tanto de alto como de ancho
+AA - Obstáculo esquivable variando la dirección más de un paso a ambos lados. Objeto mediano.
+AAA - Obstáculo muy grande, dificil de esquivar o de superficie irreconocible. Se requiere otra verificación que se dará conforme el usuario intenta esquivarlo. 
+### Niveles de frecuencia
+'- Objeto lejano
+''- Objeto relativamente cerca, poca precaución.
+'''- Objeto inminente, disminuir ritmo de paso.
+### Código lingüistico
+Este sería el lenguaje básico. Cumple las premisas que queríamos, simplicidad y poco interferente en los sentidos. El usuario puede decidir cuando ser informado. 
+
+## Diseño final, materiales y conclusiones tomadas
+Pantalla de xXx
+materiales rugosos para mejor tacto
+3 botones + gatillo?
+movimiento del dedo, angulos ...
 
 # Diseño del mango
 ## Dimensiones a considerar
@@ -172,6 +188,4 @@ Nuestro código
 
 
 
-
-1
 
