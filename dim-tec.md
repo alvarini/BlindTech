@@ -175,7 +175,29 @@ Ergonomía de usuario
 
 # Diseño del software
 
-Fuente de experimentos – Información extraída
+## Fuente de experimentos – Información extraída 
+Antes de entrometernos en el modelo, hemos rebuscado información sobre proyectos abiertos parecidos al nuestro, es decir, que hagan uso de los ultrasonidos. Así nos hemos encontrado con los siguientes y hemos extraido diversa información:
+### Radares/Sónar
+Funcionan casi igual que nuestro proyecto, pero el emisor/receptor está controlado por un servo. En nuestro caso, tendremos fijados los ángulos de emisión y recepción, y cada módulo de ultrasonido abarcará cierto área:
+![](/figuras/angulohcsr04.jpg)
+Según las especificaciones del sensor, cada módulo podría barrer 6,28m^2, según especificaciones, pero realmente será menor (unos 5,6m^2). Para reconocer el espacio en 180 grados necesitaríamos 3 modulos que abarcarán un total de 135º, es decir, 16,8m^2. Los 45 grados restantes, para llegar a 180, se complementan con el movimiento del bastón. 
+
+Los sónar barren en 360 grados gracias a la movilidad de los sensores. Se podría extrapolar a nuestro proyecto de dos maneras:
+Un sensor que rote alrededor del mango
+Cambiar el movimiento del bastón de zigzag a una rotación de muñeca: El cuerpo del mango tendría un grado de libertad y con un simple movimiento de muñeca puedes apuntar y reconocer el espacio deseado. 
+
+Sin embargo, preferimos seguir con la idea de 3 sensores fijos, pues el invidente no sabría realmente a dónde apuntar y sería algo más incómodo e incompatible con el hábito del bastón normal. El rotativo igualmente complicaría mucho el proyecto, pero son opciones que se podrían considerar en un futuro. 
+### Machine Learning
+[Proyecto Q-Learning]http://https://github.com/kennydl/Reinforcment-Learning-With-Q-Learning
+Es una tésis en la cual modelan un robot que reconoce el espacio y se mueve sin chocar por medio de ultrasonidos. La disposición e instalación se aproxima a la de nuestro proyecto. Sería interesanter aprovechar esta virtud que ofrece Matlab, la del modelado de inteligencia artificial, pues ayudaría a una orientación mucho mejor y rápida. 
+
+### GitHubs y links de interés
+-https://github.com/LuisAfonso95/Small-Projects/blob/master/MatLab%20SRF04%20Graph/MatLab_SRF04_simple_single_Plot.m
+-https://github.com/tomasdecamino/ArduinoStuff/tree/master/Arduino_Radar
+-https://github.com/kennydl/Reinforcment-Learning-With-Q-Learning/tree/master/Matlab
+-https://es.mathworks.com/matlabcentral/fileexchange/58434-mapping-your-surroundings-using-matlab-and-arduino
+
+
 
 Nuestro código
 
