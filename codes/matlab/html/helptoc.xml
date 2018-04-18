@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding="utf-8"?>
+<toc version="2.0">
+	<tocitem target="HCSR04TopFile.html">HC-SR04 Add-On Library for Arduino
+		<tocitem target="HCSR04Funclist.html">Functions 
+		    <tocitem target="HCSR04DocAddon.html">addon</tocitem>
+		    <tocitem target="HCSR04DocReadTravelTime.html">readTravelTime</tocitem>
+		    <tocitem target="HCSR04DocReadDistance.html">readDistance</tocitem>
+		</tocitem>
+		<tocitem target="HCSR04Example.html">HC-SR04 Example</tocitem>
+	</tocitem>
+</toc>
