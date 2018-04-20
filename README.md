@@ -4,10 +4,10 @@ Proyecto destinado a ayudar en la orientación a los invidentes por medio de nue
 En la página web del proyecto puedes encontrar todo mejor ordenado y detallado.
 https://alvarini.github.io/BlindTech/
 ##**Descripción documentos**
-###-dim_teo, teoría y física. No subido aún, en desarrollo
-###-dim_tec. subido y aun trabajando en el
-###-dim_com. No subido, en desarrollo
-###-/codigos. Proximamente
+dim_teo-> Fisica aplicada al caso
+dim_tec-> descripción técnica del proyecto + avances
+dim_com -> website
+Codigos: 
 Matlab code
 C code
 Arduino code
