@@ -32,7 +32,7 @@ Existen diferentes tipos de ondas pero en nuestro proyecto sólo damos cabida a 
 
 **Onda longitudinal:** Aquella que produce una interacción en las partículas con una dirección paralela a la que toma la onda en su propagación. Producen cierto efecto de dilatación e irrotacionalidad en las partículas, por eso son perfectas para registrar los objetos que hay alrededor.
 
-(λ+2G)∂2u∂2x=ρ∂2u∂2t2
+(λ+2G)∂2u/∂2x=ρ∂2/u∂2t2
 
 Siendo &quot;u&quot; el desplazamiento de la partícula debido a la onda, G y lambda constantes del aire y ρ la densidad del aire
 
